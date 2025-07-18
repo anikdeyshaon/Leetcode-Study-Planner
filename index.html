@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leetcode Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Leetcode Study Planner</h1>
+        <button id="show-add-form-btn">Add Problem</button>
+        <table id="problems-table">
+            <thead>
+                <tr>
+                    <th>Problem Name</th>
+                    <th>Problem Link</th>
+                    <th>Status/Color</th>
+                    <th>Date 1</th>
+                    <th>Date 2</th>
+                    <th>Date 3</th>
+                    <th>Date 4</th>
+                    <th>Date 5</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Problems will be rendered here -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Modal for Add/Edit Problem -->
+    <div id="problem-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-modal">&times;</span>
+            <form id="problem-form">
+                <label for="problem-name">Problem Name:</label>
+                <input type="text" id="problem-name" name="name" required>
+
+                <label for="problem-url">Problem URL:</label>
+                <input type="url" id="problem-url" name="url" required>
+
+                <label for="initial-solve-date">Initial Solve Date:</label>
+                <input type="date" id="initial-solve-date" name="date1" required>
+
+                <label for="difficulty">Difficulty:</label>
+                <select id="difficulty" name="difficulty" required>
+                    <option value="Easy">Easy</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Hard">Hard</option>
+                </select>
+
+                <div class="modal-actions">
+                    <button type="submit" id="save-problem-btn">Save</button>
+                    <button type="button" id="cancel-btn">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

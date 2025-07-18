@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 32px 24px 24px 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+#show-add-form-btn {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 18px;
+    transition: background 0.2s;
+}
+#show-add-form-btn:hover {
+    background: #0056b3;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+}
+thead {
+    background: #f1f3f4;
+}
+th, td {
+    padding: 10px 8px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+tr.problem-easy {
+    background-color: #d4edda;
+}
+tr.problem-hard {
+    background-color: #f8d7da;
+}
+tr.problem-normal {
+    background-color: #fff;
+}
+.actions button {
+    margin-right: 6px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+.actions .edit {
+    background: #ffc107;
+    color: #212529;
+}
+.actions .delete {
+    background: #dc3545;
+    color: #fff;
+}
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0,0,0,0.3);
+}
+.modal-content {
+    background: #fff;
+    margin: 60px auto;
+    padding: 28px 24px 18px 24px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}
+.close {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+}
+label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+input[type="text"], input[type="url"], input[type="date"], select {
+    width: 100%;
+    padding: 8px 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 16px;
+}
+#save-problem-btn {
+    background: #28a745;
+    color: #fff;
+}
+#cancel-btn {
+    background: #6c757d;
+    color: #fff;
+}
+@media (max-width: 700px) {
+    .container {
+        padding: 12px 2vw;
+    }
+    .modal-content {
+        max-width: 95vw;
+        padding: 18px 6vw 12px 6vw;
+    }
+    th, td {
+        padding: 7px 2px;
+        font-size: 0.95rem;
+    }
+    #show-add-form-btn {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+} 
