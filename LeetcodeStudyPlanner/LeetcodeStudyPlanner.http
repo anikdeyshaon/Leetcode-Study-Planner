@@ -1,0 +1,6 @@
+@LeetcodeStudyPlanner_HostAddress = http://localhost:5214
+
+GET {{LeetcodeStudyPlanner_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
