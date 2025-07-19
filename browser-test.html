@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Compatibility Test - Leetcode Study Planner</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .pass { background-color: #d4edda; color: #155724; }
+        .fail { background-color: #f8d7da; color: #721c24; }
+        .info { background-color: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <h1>Browser Compatibility Test</h1>
+    <div id="test-results"></div>
+    
+    <script>
+        const results = [];
+        
+        function addResult(test, passed, details = '') {
+            const result = { test, passed, details };
+            results.push(result);
+            displayResult(result);
+        }
+        
+        function displayResult(result) {
+            const div = document.createElement('div');
+            div.className = `test-result ${result.passed ? 'pass' : 'fail'}`;
+            div.innerHTML = `
+                <strong>${result.test}:</strong> ${result.passed ? 'PASS' : 'FAIL'}
+                ${result.details ? `<br><small>${result.details}</small>` : ''}
+            `;
+            document.getElementById('test-results').appendChild(div);
+        }
+        
+        // Test 1: Fetch API support
+        if (typeof fetch !== 'undefined') {
+            addResult('Fetch API', true);
+        } else {
+            addResult('Fetch API', false, 'Fetch API not supported');
+        }
+        
+        // Test 2: ES6 features
+        try {
+            const testArray = [1, 2, 3];
+            const doubled = testArray.map(x => x * 2);
+            const destructured = { a: 1, b: 2 };
+            const { a, b } = destructured;
+            addResult('ES6 Features', true);
+        } catch (e) {
+            addResult('ES6 Features', false, e.message);
+        }
+        
+        // Test 3: CSS Grid/Flexbox
+        const testElement = document.createElement('div');
+        testElement.style.display = 'grid';
+        const gridSupported = testElement.style.display === 'grid';
+        addResult('CSS Grid', gridSupported);
+        
+        testElement.style.display = 'flex';
+        const flexSupported = testElement.style.display === 'flex';
+        addResult('CSS Flexbox', flexSupported);
+        
+        // Test 4: Local Storage
+        try {
+            localStorage.setItem('test', 'value');
+            const retrieved = localStorage.getItem('test');
+            localStorage.removeItem('test');
+            addResult('Local Storage', retrieved === 'value');
+        } catch (e) {
+            addResult('Local Storage', false, e.message);
+        }
+        
+        // Test 5: Date API
+        try {
+            const date = new Date();
+            const isoString = date.toISOString();
+            addResult('Date API', isoString.length > 0);
+        } catch (e) {
+            addResult('Date API', false, e.message);
+        }
+        
+        // Test 6: Browser Info
+        const userAgent = navigator.userAgent;
+        const browserInfo = document.createElement('div');
+        browserInfo.className = 'test-result info';
+        browserInfo.innerHTML = `<strong>Browser Info:</strong> ${userAgent}`;
+        document.getElementById('test-results').appendChild(browserInfo);
+        
+        // Summary
+        const passedTests = results.filter(r => r.passed).length;
+        const totalTests = results.length;
+        const summary = document.createElement('div');
+        summary.className = `test-result ${passedTests === totalTests ? 'pass' : 'fail'}`;
+        summary.innerHTML = `<strong>Summary:</strong> ${passedTests}/${totalTests} tests passed`;
+        document.getElementById('test-results').appendChild(summary);
+    </script>
+</body>
+</html> 

@@ -159,3 +159,4 @@ D:\Projects\Leetcode Study Planner\LeetcodeStudyPlanner.Tests\obj\Debug\net9.0\r
 D:\Projects\Leetcode Study Planner\LeetcodeStudyPlanner.Tests\obj\Debug\net9.0\LeetcodeStudyPlanner.Tests.pdb
 D:\Projects\Leetcode Study Planner\LeetcodeStudyPlanner.Tests\obj\Debug\net9.0\LeetcodeStudyPlanner.Tests.genruntimeconfig.cache
 D:\Projects\Leetcode Study Planner\LeetcodeStudyPlanner.Tests\obj\Debug\net9.0\ref\LeetcodeStudyPlanner.Tests.dll
+D:\Projects\Leetcode Study Planner\LeetcodeStudyPlanner.Tests\obj\Debug\net9.0\LeetcodeStudyPlanner.Tests.sourcelink.json

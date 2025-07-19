@@ -93,7 +93,7 @@ This document outlines the development tasks required to build the Leetcode Stud
 
 ## Phase 6: Final Testing & Deployment
 
-- [ ] **6.1: End-to-End Testing:** Thoroughly test every feature of the application.
-- [ ] **6.2: Cross-Browser Testing:** Check functionality and appearance in Chrome, Firefox, and Safari.
-- [ ] **6.3: Prepare for Deployment:** Research deployment options for an ASP.NET backend and a static frontend (e.g., Azure App Service, IIS).
-- [ ] **6.4: Write README:** Update your project's `README.md` with instructions on how to set up and run the project locally.
+- [x] **6.1: End-to-End Testing:** Thoroughly test every feature of the application.
+- [x] **6.2: Cross-Browser Testing:** Check functionality and appearance in Chrome, Firefox, and Safari.
+- [x] **6.3: Prepare for Deployment:** Research deployment options for an ASP.NET backend and a static frontend (e.g., Azure App Service, IIS).
+- [x] **6.4: Write README:** Update your project's `README.md` with instructions on how to set up and run the project locally.
